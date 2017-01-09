@@ -3,6 +3,7 @@ li{
   margin-left:10px;
   width:100px;
   text-align:center;
+  overflow:hidden;
 }
 
 #top{
