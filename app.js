@@ -55,7 +55,7 @@ function clearForm() {
 
 function salary(add){
   expenditures+=parseFloat((Number(add)/12).toFixed(2));
-  //expenditures=expenditures.toFixed(2);
+  expenditures=parseFloat(expenditures.toFixed(2));
   $('#expenditures').text(expenditures);
 
 }
@@ -64,7 +64,7 @@ $(document).on('click','#delete',function(){
   var salary=Number($(this).parent().parent().find('#salary').text());
   console.log(salary);
   expenditures-=parseFloat((salary/12).toFixed(2));
-  //expenditures=expenditures.toFixed(2);
+  expenditures=parseFloat(expenditures.toFixed(2));
   $('#expenditures').text(expenditures);
   $(this).parent().parent().parent().fadeOut(1000);
   $(this).parent().parent().parent().remove();
