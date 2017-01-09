@@ -34,7 +34,7 @@ function appendDom(emp) {
   var $id=$('<li>' + emp.employeeIdNumber + '</li>' );
   var $job=$('<li>' + emp.employeeJobTitle + '</li>' );
   var $salary=$('<li id="salary">' + emp.employeeSalary + '</li>' );
-  var $button=$('<li><button id="delete">del</button></li>')
+  var $button=$('<li><button id="delete">Delete</button></li>')
   $ul.append($firstName);
   $ul.append($lastName);
   $ul.append($id);
@@ -43,7 +43,10 @@ function appendDom(emp) {
   $ul.append($button);
   $emp.append($ul);
 
-  $('#employees').append($emp); // append our div to the DOM
+  $('#employees').append($emp);
+  $( ".employee" ).animate({
+     opacity: 1 //use more parameter for effect
+}, 1000 );
 }
 
 function clearForm() {
@@ -63,5 +66,6 @@ $(document).on('click','#delete',function(){
   expenditures-=parseFloat((salary/12).toFixed(2));
   //expenditures=expenditures.toFixed(2);
   $('#expenditures').text(expenditures);
+  $(this).parent().parent().parent().fadeOut(1000);
   $(this).parent().parent().parent().remove();
 });
