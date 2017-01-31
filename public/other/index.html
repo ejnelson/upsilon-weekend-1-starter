@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weekend 1</title>
+    <script src="../scripts/angular.min.js" charset="utf-8"></script>
+    <script src="../scripts/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="/other/styles.css">
+    </head>
+  <body ng-app="employeeApp" ng-controller="EmployeeController as EmpCtrl">
+    <div id="form">
+      <h3 >Employee Form</h3>
+
+    <form>
+      <div class="formline">
+      <label for="employeeFirstName">First Name</label>
+      <input type="text" ng-model="EmpCtrl.entries.name" /></div>
+      <div class="formline">
+      <label for="employeeLastName">Last Name</label>
+      <input type="text" ng-model="EmpCtrl.entries.lname" /></div>
+      <div class="formline">
+      <label for="employeeIdNumber">ID Number</label>
+      <input type="text" ng-model="EmpCtrl.entries.id" /></div>
+      <div class="formline">
+      <label for="employeeJobTitle">Job Title</label>
+      <input type="text" ng-model="EmpCtrl.entries.title" /></div>
+      <div class="formline">
+      <label for="employeeSalary">Annual Salary</label>
+      <input type="number" ng-model="EmpCtrl.entries.salary" /></div>
+      <button type="submit" ng-click="EmpCtrl.addEntries()" >Submit</button>
+    </form>
+    </div>
+    <p>
+      adding entry: {{EmpCtrl.entries.name}}
+    </p>
+    <div id="employees">
+      <h2><span>Monthly Salary Expenditures: $</span><span id="expenditures">0</span></h2>
+      <div>
+        <ul >
+          <li id="top">First Name</li>
+          <li id="top">Last Name</li>
+          <li id="top">ID</li>
+          <li id="top">Title</li>
+          <li id="top">Annual Salary</li>
+          <li id="top">Delete?</li>
+        </ul>
+        <ul ng-repeat="entry in EmpCtrl.line">
+          <li>{{entry.name}}</li>
+          <li>{{entry.lname}}</li>
+          <li>{{entry.id}}</li>
+          <li>{{entry.title}}</li>
+          <li>{{entry.salary}}</li>
+          <li><button ng-click="EmpCtrl.line.splice($index,1)">Delete?</button></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>

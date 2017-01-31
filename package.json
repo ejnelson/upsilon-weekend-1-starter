@@ -1,0 +1,23 @@
+{
+  "name": "upsilon-weekend-1-starter",
+  "version": "1.0.0",
+  "description": "The functionality of this app is based around a form. The form takes 5 inputs from a user and displays the inputs in a row of a table that also includes a delete button. Additionally the app is able to sum the monthly expenditures of all of the entries based on their annual salaries. Each entry is able to be deleted after being added.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejnelson/upsilon-weekend-1-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejnelson/upsilon-weekend-1-starter/issues"
+  },
+  "homepage": "https://github.com/ejnelson/upsilon-weekend-1-starter#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
