@@ -18,6 +18,8 @@ emp.addEntries=function(){
 emp.line.push(object);
 }
 
+emp.deleteEntries=function(){
 
+}
 
 });
